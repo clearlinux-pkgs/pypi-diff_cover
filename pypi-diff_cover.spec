@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x972401BDE60128CB (matt.bachmann@lola.com)
 #
 Name     : pypi-diff_cover
-Version  : 6.4.5
-Release  : 4
-URL      : https://files.pythonhosted.org/packages/f5/ee/bb62769b2a49605580f2b0c40cf36bb2ca0fa197bca5622e4cddb8d60756/diff_cover-6.4.5.tar.gz
-Source0  : https://files.pythonhosted.org/packages/f5/ee/bb62769b2a49605580f2b0c40cf36bb2ca0fa197bca5622e4cddb8d60756/diff_cover-6.4.5.tar.gz
-Source1  : https://files.pythonhosted.org/packages/f5/ee/bb62769b2a49605580f2b0c40cf36bb2ca0fa197bca5622e4cddb8d60756/diff_cover-6.4.5.tar.gz.asc
+Version  : 6.5.0
+Release  : 5
+URL      : https://files.pythonhosted.org/packages/36/6b/92172e889e9850d2a078f34aa8baf041caf011300961174519b3dda7505e/diff_cover-6.5.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/36/6b/92172e889e9850d2a078f34aa8baf041caf011300961174519b3dda7505e/diff_cover-6.5.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/36/6b/92172e889e9850d2a078f34aa8baf041caf011300961174519b3dda7505e/diff_cover-6.5.0.tar.gz.asc
 Summary  : Run coverage and linting reports on diffs
 Group    : Development/Tools
 License  : Apache-2.0
@@ -65,15 +65,15 @@ python3 components for the pypi-diff_cover package.
 
 
 %prep
-%setup -q -n diff_cover-6.4.5
-cd %{_builddir}/diff_cover-6.4.5
+%setup -q -n diff_cover-6.5.0
+cd %{_builddir}/diff_cover-6.5.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1649737102
+export SOURCE_DATE_EPOCH=1650125082
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -89,7 +89,7 @@ python3 -m build --wheel --skip-dependency-check --no-isolation
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-diff_cover
-cp %{_builddir}/diff_cover-6.4.5/LICENSE %{buildroot}/usr/share/package-licenses/pypi-diff_cover/598f87f072f66e2269dd6919292b2934dbb20492
+cp %{_builddir}/diff_cover-6.5.0/LICENSE %{buildroot}/usr/share/package-licenses/pypi-diff_cover/598f87f072f66e2269dd6919292b2934dbb20492
 pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
