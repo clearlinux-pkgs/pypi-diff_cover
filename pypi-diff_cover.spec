@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x972401BDE60128CB (matt.bachmann@lola.com)
 #
 Name     : pypi-diff_cover
-Version  : 6.5.0
-Release  : 6
-URL      : https://files.pythonhosted.org/packages/36/6b/92172e889e9850d2a078f34aa8baf041caf011300961174519b3dda7505e/diff_cover-6.5.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/36/6b/92172e889e9850d2a078f34aa8baf041caf011300961174519b3dda7505e/diff_cover-6.5.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/36/6b/92172e889e9850d2a078f34aa8baf041caf011300961174519b3dda7505e/diff_cover-6.5.0.tar.gz.asc
+Version  : 6.5.1
+Release  : 7
+URL      : https://files.pythonhosted.org/packages/d9/bf/211cd15d8b148a93bd3dd618e0a096db105a68c21167fbf8a88e361a1f39/diff_cover-6.5.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/d9/bf/211cd15d8b148a93bd3dd618e0a096db105a68c21167fbf8a88e361a1f39/diff_cover-6.5.1.tar.gz
+Source1  : https://files.pythonhosted.org/packages/d9/bf/211cd15d8b148a93bd3dd618e0a096db105a68c21167fbf8a88e361a1f39/diff_cover-6.5.1.tar.gz.asc
 Summary  : Run coverage and linting reports on diffs
 Group    : Development/Tools
 License  : Apache-2.0
@@ -65,10 +65,10 @@ python3 components for the pypi-diff_cover package.
 
 
 %prep
-%setup -q -n diff_cover-6.5.0
-cd %{_builddir}/diff_cover-6.5.0
+%setup -q -n diff_cover-6.5.1
+cd %{_builddir}/diff_cover-6.5.1
 pushd ..
-cp -a diff_cover-6.5.0 buildavx2
+cp -a diff_cover-6.5.1 buildavx2
 popd
 
 %build
@@ -76,7 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1653057569
+export SOURCE_DATE_EPOCH=1655998620
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -88,8 +88,8 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
-export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
-export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
+export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 -msse2avx"
+export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 -msse2avx "
 export FFLAGS="$FFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3 "
 export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
@@ -101,7 +101,7 @@ popd
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-diff_cover
-cp %{_builddir}/diff_cover-6.5.0/LICENSE %{buildroot}/usr/share/package-licenses/pypi-diff_cover/598f87f072f66e2269dd6919292b2934dbb20492
+cp %{_builddir}/diff_cover-6.5.1/LICENSE %{buildroot}/usr/share/package-licenses/pypi-diff_cover/598f87f072f66e2269dd6919292b2934dbb20492
 pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -114,7 +114,7 @@ export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3 "
 export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
 pip install --root=%{buildroot}-v3 --no-deps --ignore-installed dist/*.whl
 popd
-/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot}/usr/share/clear/optimized-elf/ %{buildroot}/usr/share/clear/filemap/filemap-%{name}
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
