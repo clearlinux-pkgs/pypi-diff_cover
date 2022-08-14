@@ -6,7 +6,7 @@
 #
 Name     : pypi-diff_cover
 Version  : 6.5.1
-Release  : 8
+Release  : 9
 URL      : https://files.pythonhosted.org/packages/d9/bf/211cd15d8b148a93bd3dd618e0a096db105a68c21167fbf8a88e361a1f39/diff_cover-6.5.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d9/bf/211cd15d8b148a93bd3dd618e0a096db105a68c21167fbf8a88e361a1f39/diff_cover-6.5.1.tar.gz
 Source1  : https://files.pythonhosted.org/packages/d9/bf/211cd15d8b148a93bd3dd618e0a096db105a68c21167fbf8a88e361a1f39/diff_cover-6.5.1.tar.gz.asc
