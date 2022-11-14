@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x972401BDE60128CB (matt.bachmann@lola.com)
 #
 Name     : pypi-diff_cover
-Version  : 7.0.1
-Release  : 13
-URL      : https://files.pythonhosted.org/packages/d1/4d/8557aab5641b8a524a83b3515f9a49128a4215d06712ebc4132f49d5b4d4/diff_cover-7.0.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/d1/4d/8557aab5641b8a524a83b3515f9a49128a4215d06712ebc4132f49d5b4d4/diff_cover-7.0.1.tar.gz
-Source1  : https://files.pythonhosted.org/packages/d1/4d/8557aab5641b8a524a83b3515f9a49128a4215d06712ebc4132f49d5b4d4/diff_cover-7.0.1.tar.gz.asc
+Version  : 7.0.2
+Release  : 14
+URL      : https://files.pythonhosted.org/packages/3c/76/0f15409c217ae3214ad2655b9e8fa71877aac2a5ecc1ae3f75b745725fd0/diff_cover-7.0.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/3c/76/0f15409c217ae3214ad2655b9e8fa71877aac2a5ecc1ae3f75b745725fd0/diff_cover-7.0.2.tar.gz
+Source1  : https://files.pythonhosted.org/packages/3c/76/0f15409c217ae3214ad2655b9e8fa71877aac2a5ecc1ae3f75b745725fd0/diff_cover-7.0.2.tar.gz.asc
 Summary  : Run coverage and linting reports on diffs
 Group    : Development/Tools
 License  : Apache-2.0
@@ -65,10 +65,10 @@ python3 components for the pypi-diff_cover package.
 
 
 %prep
-%setup -q -n diff_cover-7.0.1
-cd %{_builddir}/diff_cover-7.0.1
+%setup -q -n diff_cover-7.0.2
+cd %{_builddir}/diff_cover-7.0.2
 pushd ..
-cp -a diff_cover-7.0.1 buildavx2
+cp -a diff_cover-7.0.2 buildavx2
 popd
 
 %build
@@ -76,7 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1663687457
+export SOURCE_DATE_EPOCH=1668446807
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -88,8 +88,8 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
-export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 -msse2avx"
-export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 -msse2avx "
+export CFLAGS="$CFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
+export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FFLAGS="$FFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3 "
 export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
