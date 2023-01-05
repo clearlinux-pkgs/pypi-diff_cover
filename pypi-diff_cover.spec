@@ -6,7 +6,7 @@
 #
 Name     : pypi-diff_cover
 Version  : 7.3.0
-Release  : 19
+Release  : 20
 URL      : https://files.pythonhosted.org/packages/42/d0/0b8207a228d70d608e8bfeb66f02740f9f6545cb8d44d347859e26243ba0/diff_cover-7.3.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/42/d0/0b8207a228d70d608e8bfeb66f02740f9f6545cb8d44d347859e26243ba0/diff_cover-7.3.0.tar.gz
 Source1  : https://files.pythonhosted.org/packages/42/d0/0b8207a228d70d608e8bfeb66f02740f9f6545cb8d44d347859e26243ba0/diff_cover-7.3.0.tar.gz.asc
