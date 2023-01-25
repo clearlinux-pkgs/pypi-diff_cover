@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x972401BDE60128CB (matt.bachmann@lola.com)
 #
 Name     : pypi-diff_cover
-Version  : 7.3.2
-Release  : 21
-URL      : https://files.pythonhosted.org/packages/52/54/f62c4902c805db3b49871d69245ddc6d920dd5ecb1e4ff059567bd6474ae/diff_cover-7.3.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/52/54/f62c4902c805db3b49871d69245ddc6d920dd5ecb1e4ff059567bd6474ae/diff_cover-7.3.2.tar.gz
-Source1  : https://files.pythonhosted.org/packages/52/54/f62c4902c805db3b49871d69245ddc6d920dd5ecb1e4ff059567bd6474ae/diff_cover-7.3.2.tar.gz.asc
+Version  : 7.4.0
+Release  : 22
+URL      : https://files.pythonhosted.org/packages/a6/1f/9ae901399790fa727663691500b947e55f4dc2a3e90e1507d4d1d0718fe7/diff_cover-7.4.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/a6/1f/9ae901399790fa727663691500b947e55f4dc2a3e90e1507d4d1d0718fe7/diff_cover-7.4.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/a6/1f/9ae901399790fa727663691500b947e55f4dc2a3e90e1507d4d1d0718fe7/diff_cover-7.4.0.tar.gz.asc
 Summary  : Run coverage and linting reports on diffs
 Group    : Development/Tools
 License  : Apache-2.0
@@ -68,10 +68,10 @@ python3 components for the pypi-diff_cover package.
 
 
 %prep
-%setup -q -n diff_cover-7.3.2
-cd %{_builddir}/diff_cover-7.3.2
+%setup -q -n diff_cover-7.4.0
+cd %{_builddir}/diff_cover-7.4.0
 pushd ..
-cp -a diff_cover-7.3.2 buildavx2
+cp -a diff_cover-7.4.0 buildavx2
 popd
 
 %build
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1674149037
+export SOURCE_DATE_EPOCH=1674661430
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
