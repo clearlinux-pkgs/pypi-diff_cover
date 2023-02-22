@@ -1,5 +1,5 @@
 PKG_NAME := pypi-diff_cover
-URL = https://files.pythonhosted.org/packages/a6/1f/9ae901399790fa727663691500b947e55f4dc2a3e90e1507d4d1d0718fe7/diff_cover-7.4.0.tar.gz
+URL = https://files.pythonhosted.org/packages/f4/2a/737fa2b13ff9a53c6e9a0b4c9dc639459325b5b769f2fc1c250dd1c4f4a4/diff_cover-7.5.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
