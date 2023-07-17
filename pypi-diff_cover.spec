@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-diff_cover
-Version  : 7.6.1
-Release  : 25
-URL      : https://files.pythonhosted.org/packages/2d/6c/41c8d3f0780b5de55cea25453a5f2a1160f4ba2d8760c01bbf6cf2669d66/diff_cover-7.6.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/2d/6c/41c8d3f0780b5de55cea25453a5f2a1160f4ba2d8760c01bbf6cf2669d66/diff_cover-7.6.1.tar.gz
+Version  : 7.7.0
+Release  : 26
+URL      : https://files.pythonhosted.org/packages/37/c2/f1919023fea5079b479d97793c368db8dd337170a7dbc4b5e76c1fc29d12/diff_cover-7.7.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/37/c2/f1919023fea5079b479d97793c368db8dd337170a7dbc4b5e76c1fc29d12/diff_cover-7.7.0.tar.gz
 Summary  : Run coverage and linting reports on diffs
 Group    : Development/Tools
 License  : Apache-2.0
@@ -66,10 +66,10 @@ python3 components for the pypi-diff_cover package.
 
 
 %prep
-%setup -q -n diff_cover-7.6.1
-cd %{_builddir}/diff_cover-7.6.1
+%setup -q -n diff_cover-7.7.0
+cd %{_builddir}/diff_cover-7.7.0
 pushd ..
-cp -a diff_cover-7.6.1 buildavx2
+cp -a diff_cover-7.7.0 buildavx2
 popd
 
 %build
@@ -77,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1689260047
+export SOURCE_DATE_EPOCH=1689611540
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
