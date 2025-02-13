@@ -7,7 +7,7 @@
 #
 Name     : pypi-diff_cover
 Version  : 9.2.2
-Release  : 39
+Release  : 40
 URL      : https://files.pythonhosted.org/packages/e4/82/67771e01d6087a158dde1698b9ced07970cd19a44c99a02dd90d33e2e50d/diff_cover-9.2.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/e4/82/67771e01d6087a158dde1698b9ced07970cd19a44c99a02dd90d33e2e50d/diff_cover-9.2.2.tar.gz
 Summary  : Run coverage and linting reports on diffs
