@@ -6,10 +6,10 @@
 # autospec commit: 65cf152
 #
 Name     : pypi-diff_cover
-Version  : 9.5.0
-Release  : 47
-URL      : https://files.pythonhosted.org/packages/1f/8b/59525456c2607982a30f809f7ad02b26b0c18951aff95d5b14c37e61d346/diff_cover-9.5.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/1f/8b/59525456c2607982a30f809f7ad02b26b0c18951aff95d5b14c37e61d346/diff_cover-9.5.0.tar.gz
+Version  : 9.6.0
+Release  : 48
+URL      : https://files.pythonhosted.org/packages/4c/81/0496938bb72606231b2518b6fd404a5adfde3c1b60a97d0dc39a92b25570/diff_cover-9.6.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/4c/81/0496938bb72606231b2518b6fd404a5adfde3c1b60a97d0dc39a92b25570/diff_cover-9.6.0.tar.gz
 Summary  : Run coverage and linting reports on diffs
 Group    : Development/Tools
 License  : Apache-2.0
@@ -68,10 +68,10 @@ python3 components for the pypi-diff_cover package.
 
 
 %prep
-%setup -q -n diff_cover-9.5.0
-cd %{_builddir}/diff_cover-9.5.0
+%setup -q -n diff_cover-9.6.0
+cd %{_builddir}/diff_cover-9.6.0
 pushd ..
-cp -a diff_cover-9.5.0 buildavx2
+cp -a diff_cover-9.6.0 buildavx2
 popd
 
 %build
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1752157177
+export SOURCE_DATE_EPOCH=1752763488
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
